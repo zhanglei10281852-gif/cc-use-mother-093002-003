@@ -1,0 +1,53 @@
+{
+  "graphs": [
+    {
+      "entity_id": "GRAPH-CN",
+      "display_name": "东盟职业院校中文能力图谱",
+      "revision": 1,
+      "skills": [
+        {"skill_id": "PY", "display_name": "拼音与声调", "prerequisites": []},
+        {"skill_id": "VB", "display_name": "基础词汇", "prerequisites": ["PY"]},
+        {"skill_id": "VD", "display_name": "日常场景词汇", "prerequisites": ["VB"]},
+        {"skill_id": "GB", "display_name": "基础语法", "prerequisites": ["VB"]},
+        {"skill_id": "RB", "display_name": "基础阅读", "prerequisites": ["VD", "GB"]},
+        {"skill_id": "WB", "display_name": "基础写作", "prerequisites": ["GB"]},
+        {"skill_id": "CB", "display_name": "日常会话", "prerequisites": ["VD", "GB"]}
+      ]
+    }
+  ],
+  "banks": [
+    {
+      "entity_id": "BANK-CN",
+      "display_name": "东盟职业院校中文诊断题库",
+      "revision": 1,
+      "graph_qvid": "GRAPH-CN:1",
+      "items": [
+        {"item_id": "q-py-01", "prompt": "写出“你好”的拼音", "answer": "nǐ hǎo", "skill_ids": ["PY"], "difficulty": 0.10, "exposure_cap": null, "tie_rank": 10},
+        {"item_id": "q-py-02", "prompt": "写出“谢谢”的拼音", "answer": "xièxie", "skill_ids": ["PY"], "difficulty": 0.15, "exposure_cap": 5, "tie_rank": 10},
+        {"item_id": "q-vb-01", "prompt": "写出数字 5 的中文", "answer": "五", "skill_ids": ["VB"], "difficulty": 0.15, "exposure_cap": null, "tie_rank": 10},
+        {"item_id": "q-vb-02", "prompt": "写出 teacher 的中文", "answer": "老师", "skill_ids": ["VB"], "difficulty": 0.20, "exposure_cap": null, "tie_rank": 10},
+        {"item_id": "q-vb-03", "prompt": "写出“学生”的拼音之外的中文词义：student = ?", "answer": "学生", "skill_ids": ["VB"], "difficulty": 0.22, "exposure_cap": 3, "tie_rank": 10},
+        {"item_id": "q-vd-01", "prompt": "写出 water 的中文", "answer": "水", "skill_ids": ["VD"], "difficulty": 0.35, "exposure_cap": 3, "tie_rank": 10},
+        {"item_id": "q-vd-02", "prompt": "在学校吃饭的地方叫什么？", "answer": "食堂", "skill_ids": ["VD"], "difficulty": 0.38, "exposure_cap": null, "tie_rank": 10},
+        {"item_id": "q-gb-01", "prompt": "补全句子：我___学生。", "answer": "是", "skill_ids": ["GB"], "difficulty": 0.30, "exposure_cap": null, "tie_rank": 10},
+        {"item_id": "q-gb-02", "prompt": "改为否定句：我不是学生。原句用肯定表达为：我___学生。", "answer": "是", "skill_ids": ["GB"], "difficulty": 0.34, "exposure_cap": 2, "tie_rank": 10},
+        {"item_id": "q-gb-03", "prompt": "填量词：一___书", "answer": "本", "skill_ids": ["GB"], "difficulty": 0.45, "exposure_cap": 2, "tie_rank": 10},
+        {"item_id": "q-cb-01", "prompt": "早上见面应该说：“___好！”", "answer": "您早", "skill_ids": ["CB", "VD"], "difficulty": 0.50, "exposure_cap": null, "tie_rank": 10},
+        {"item_id": "q-cb-02", "prompt": "别人说“谢谢”，你应该回答：不___。", "answer": "客气", "skill_ids": ["CB", "VD"], "difficulty": 0.55, "exposure_cap": null, "tie_rank": 10},
+        {"item_id": "q-rb-01", "prompt": "阅读“我是职业学校的学生，我在食堂吃饭。”回答：说话人在哪里吃饭？", "answer": "食堂", "skill_ids": ["RB", "VD"], "difficulty": 0.60, "exposure_cap": null, "tie_rank": 10},
+        {"item_id": "q-rb-02", "prompt": "阅读“今天星期一，我们有中文课。”回答：星期几有中文课？", "answer": "星期一", "skill_ids": ["RB", "GB"], "difficulty": 0.70, "exposure_cap": null, "tie_rank": 10},
+        {"item_id": "q-wb-01", "prompt": "用“叫”写一个自我介绍句子（答案：我叫王明）", "answer": "我叫王明", "skill_ids": ["WB", "GB"], "difficulty": 0.65, "exposure_cap": null, "tie_rank": 10},
+        {"item_id": "q-wb-02", "prompt": "把“在/学校/我/学习”连成句子", "answer": "我在学校学习", "skill_ids": ["WB", "GB"], "difficulty": 0.80, "exposure_cap": null, "tie_rank": 10},
+        {"item_id": "q-vd-03a", "prompt": "写出 shop 的中文", "answer": "商店", "skill_ids": ["VD"], "difficulty": 0.35, "exposure_cap": null, "tie_rank": 20},
+        {"item_id": "q-vd-03b", "prompt": "写出 food 的中文", "answer": "饭菜", "skill_ids": ["VD"], "difficulty": 0.35, "exposure_cap": null, "tie_rank": 20}
+      ]
+    }
+  ],
+  "rules": [
+    {
+      "entity_id": "RULES-CN",
+      "display_name": "中文诊断六段制评分规则",
+      "revision": 1
+    }
+  ]
+}

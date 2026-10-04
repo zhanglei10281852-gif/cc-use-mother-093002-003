@@ -13,6 +13,10 @@ class SkillGraphVersion:
             raise ValueError("版本化实体信息不合法")
 
 
+# 所有可版本化实体（能力图谱 / 题库 / 评分规则）共用同一版本信息形状。
+VersionInfo = SkillGraphVersion
+
+
 @dataclass(frozen=True)
 class ExamItemRecord:
     record_id: str
