@@ -5,3 +5,6 @@ __pycache__/
 .env
 *.db
 *.sqlite
+
+# 本地运行时数据目录（seed/serve 默认使用）
+/data/
